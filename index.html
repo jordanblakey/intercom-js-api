@@ -31,7 +31,7 @@
     alert("Visitor ID:" + vid);
     var email = '{\"email\": \"' + document.getElementById('email').value + '\"}';
     alert('window.Intercom(\'update\', ' + email + ');');
-    window.Intercom('update', {"email":"netherlands-intercom-testing@gmail.com"});
+    Intercom('update', {"email":"netherlands-intercom-testing@gmail.com"});
     // window.Intercom('update', email);
   };
 
