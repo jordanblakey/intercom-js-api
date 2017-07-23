@@ -27,15 +27,15 @@
   <script type="text/javascript">
   function captureEmail() {
     var vid = Intercom("getVisitorId");
-    console.log("Visitor ID:" + vid);
+    alert("Visitor ID:" + vid);
     var email = '{\"email\": \"' + document.getElementById('email').value + '\"}';
-    console.log('Intercom(\'update\', ' + email + ');');
+    alert('Intercom(\'update\', ' + email + ');');
     Intercom('update', email);
   };
 
-  document.getElementById('form').addEventListener("submit", function(event){
-    event.preventDefault();
-  }, false);
+  // document.getElementById('form').addEventListener("submit", function(event){
+  //   event.preventDefault();
+  // }, false);
   </script>
 
   <script>
