@@ -28,8 +28,8 @@
   function captureEmail() {
     var vid = Intercom("getVisitorId");
     console.log("Visitor ID:" + vid);
-    var email = ' {\"email\": \"' + document.getElementById('email').value + '\"}';
-    console.log('Intercom('update', ' + email + ');');
+    var email = '{\"email\": \"' + document.getElementById('email').value + '\"}';
+    console.log('Intercom(\'update\', ' + email + ');');
     Intercom('update', email);
   };
 
