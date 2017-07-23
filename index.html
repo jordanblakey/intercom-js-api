@@ -30,10 +30,11 @@
   function captureEmail() {
     var vid = window.Intercom("getVisitorId");
     alert("Visitor ID:" + vid);
-    var email = '\"email\": \"' + document.getElementById('email').value + '\"';
-    alert('Intercom(\'update\', {' + email + '});');
-    Intercom('update', {email});
-    // Intercom('update', email);
+    // var email = '\"email\": \"' + document.getElementById('email').value + '\"';
+    var email = {}
+    email['email'] = document.getElementById('email').value;
+    alert('Intercom(\'update\', ' + email + ');');
+    Intercom('update', email);
   };
 
   // document.getElementById('form').addEventListener("submit", function(event){
