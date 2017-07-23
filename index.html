@@ -31,11 +31,14 @@
     var vid = window.Intercom("getVisitorId");
     alert("Visitor ID:" + vid);
     // var email = '\"email\": \"' + document.getElementById('email').value + '\"';
-    var email = {}
-    email['email'] = document.getElementById('email').value;
+    // var email = '\"email\": \"' + document.getElementById('email').value + '\"';
+    // var email = {}
+    // email['email'] = document.getElementById('email').value;
+    var email = document.getElementById('email').value;
     // Intercom('update', {"email":"netherlands-intercom-testing@gmail.com"});
-    alert('Intercom(\'update\', ' + email + ');');
-    Intercom('update', email['email']);
+    alert('Intercom(\'update\', {"email": "' + email + '"});');
+    // Intercom('update', email['email']);
+    Intercom('update', {"email":email});
   };
 
   // document.getElementById('form').addEventListener("submit", function(event){
