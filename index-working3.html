@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Intercom Test</title>
+</head>
+
+<body>
+  <h1>Hello World</h1>
+  <form onsubmit="captureEmail()">
+    <input type="email" name="email" id="email">
+    <input type="submit" name="submit" value="Send">
+  </form>
+  <button type="button" name="button" onclick="captureEmail()"> FAKE SEND</button>
+
+
+  <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+    window.Intercom("boot", {
+      app_id: "xaqr2fhe"
+    });
+    window.Intercom("update");
+  });
+  </script>
+
+  <script>
+  function captureEmail() {
+    var vid = window.Intercom("getVisitorId");
+    alert("Visitor ID:" + vid);
+    // var email = '\"email\": \"' + document.getElementById('email').value + '\"';
+    // var email = '\"email\": \"' + document.getElementById('email').value + '\"';
+    // var email = {}
+    // email['email'] = document.getElementById('email').value;
+    var email = document.getElementById('email').value;
+    // Intercom('update', {"email":"netherlands-intercom-testing@gmail.com"});
+    alert('Intercom(\'update\', {"email": "' + email + '"});');
+    // Intercom('update', email['email']);
+    Intercom('update', {"email":email});
+  };
+
+  // document.getElementById('form').addEventListener("submit", function(event){
+  //   event.preventDefault();
+  // }, false);
+
+  window.intercomSettings = {
+    app_id: "z6uqiu9w"
+  };
+  </script>
+  <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/z6uqiu9w';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+</body>
+
+</html>
