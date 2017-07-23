@@ -22,20 +22,20 @@
       app_id: "xaqr2fhe"
     });
     // window.Intercom("update");
-    // window.Intercom('update', {"email":"slovakia@gmail.com","name": "Slovakia VPN Test"});
+
+    function captureEmail() {
+      var vid = window.Intercom("getVisitorId");
+      alert("Visitor ID:" + vid);
+      var email = '{\"email\": \"' + document.getElementById('email').value + '\"}';
+      alert('window.Intercom(\'update\', ' + email + ');');
+      // window.Intercom('update', email);
+      window.Intercom('update', {"email":"france@gmail.com","name": "France Tor Test"});
+    };
+
+    // document.getElementById('form').addEventListener("submit", function(event){
+    //   event.preventDefault();
+    // }, false);
   });
-  </script>
-  <script type="text/javascript">
-  function captureEmail() {
-    var vid = window.Intercom("getVisitorId");
-    alert("Visitor ID:" + vid);
-    var email = '{\"email\": \"' + document.getElementById('email').value + '\"}';
-    alert('Intercom(\'update\', ' + email + ');');
-    window.Intercom('update', email);
-  };
-  // document.getElementById('form').addEventListener("submit", function(event){
-  //   event.preventDefault();
-  // }, false);
   </script>
 
   <script>
