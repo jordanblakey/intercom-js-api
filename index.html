@@ -10,7 +10,7 @@
 
 <body>
   <h1>Hello World</h1>
-  <form id="form" onsubmit="captureEmail()">
+  <form onsubmit="captureEmail()">
     <input type="email" name="email" id="email">
     <input type="submit" name="submit" value="Send">
   </form>
@@ -31,13 +31,13 @@
     alert("Visitor ID:" + vid);
     var email = '{\"email\": \"' + document.getElementById('email').value + '\"}';
     alert('window.Intercom(\'update\', ' + email + ');');
-    Intercom('update', {"email":"canada-intercom-testing@gmail.com"});
-    // window.Intercom('update', email);
+    // Intercom('update', {"email":"canada-intercom-testing@gmail.com"});
+    Intercom('update', email);
   };
 
-  document.getElementById('form').addEventListener("submit", function(event){
-    event.preventDefault();
-  }, false);
+  // document.getElementById('form').addEventListener("submit", function(event){
+  //   event.preventDefault();
+  // }, false);
 
   window.intercomSettings = {
     app_id: "z6uqiu9w"
