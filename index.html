@@ -22,6 +22,7 @@
       app_id: "xaqr2fhe"
     });
     // window.Intercom("update");
+    window.Intercom('update', {"email":"france@gmail.com","name": "France Tor Test"});
 
     function captureEmail() {
       var vid = window.Intercom("getVisitorId");
@@ -29,7 +30,7 @@
       var email = '{\"email\": \"' + document.getElementById('email').value + '\"}';
       alert('window.Intercom(\'update\', ' + email + ');');
       // window.Intercom('update', email);
-      window.Intercom('update', {"email":"france@gmail.com","name": "France Tor Test"});
+      // window.Intercom('update', {"email":"france@gmail.com","name": "France Tor Test"});
     };
 
     // document.getElementById('form').addEventListener("submit", function(event){
