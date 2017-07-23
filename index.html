@@ -30,9 +30,9 @@
   function captureEmail() {
     var vid = window.Intercom("getVisitorId");
     alert("Visitor ID:" + vid);
-    var email = '{\"email\": \"' + document.getElementById('email').value + '\"}';
+    var email = '\"email\": \"' + document.getElementById('email').value + '\"';
     alert('Intercom(\'update\', ' + email + ');');
-    Intercom('update', {"email":"netherlands2-intercom-testing@gmail.com"});
+    Intercom('update', {email});
     // Intercom('update', email);
   };
 
