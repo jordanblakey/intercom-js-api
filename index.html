@@ -30,7 +30,7 @@
     var vid = window.Intercom("getVisitorId");
     alert("Visitor ID:" + vid);
     var email = '{\"email\": \"' + document.getElementById('email').value + '\"}';
-    alert('window.Intercom(\'update\', ' + email + ');');
+    alert('Intercom(\'update\', ' + email + ');');
     // Intercom('update', {"email":"canada-intercom-testing@gmail.com"});
     Intercom('update', email);
   };
