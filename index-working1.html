@@ -22,13 +22,13 @@
       app_id: "xaqr2fhe"
     });
     window.Intercom("update");
+    window.Intercom('update', {"email":"unitedstates@gmail.com","name": "US (intercom-testing)"});
 
     function captureEmail() {
       var vid = window.Intercom("getVisitorId");
       alert("Visitor ID:" + vid);
       var email = '{\"email\": \"' + document.getElementById('email').value + '\"}';
       alert('window.Intercom(\'update\', ' + email + ');');
-      window.Intercom('update', {"email":"netherlands-intercom-testing@gmail.com"});
       // window.Intercom('update', email);
     };
 
